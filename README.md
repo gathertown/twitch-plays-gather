@@ -23,3 +23,9 @@ replace the `SPACE_ID` in index.ts with your own spaceId
 ## running
 
 `npm run start`
+
+## NOTE(!)
+
+Putting in your API key will make the bot join as you!
+You probably want to be able to join as yourself and have the bot going at the same time.
+Just login with a different email and get an API key for that account, so you can use yours normally.
