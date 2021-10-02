@@ -35,12 +35,11 @@ game.subscribeToEvent("playerChats", (data, _context) => {
 				game.move(MoveDirection.Dance);
 				break;
 			default:
-				game.chat(
-					message.senderId,
-					[],
-					"",
-					"what? try sending up/down/left/right"
-				);
+				let reply = "what? try sending up/down/left/right";
+				if (message.contents.substring(0, 3).toLowerCase() === "how") {
+					reply = "https://github.com/gathertown/twitch-plays-gather";
+				}
+				game.chat(message.senderId, [], "", reply);
 		}
 	}
 });
